@@ -29,6 +29,10 @@ gem 'mysql2', '~> 0.3.18'
 
 gem 'rails-helper'
 
+gem 'devise'
+gem 'devise_token_auth' # Token based authentication for Rails JSON APIs
+gem 'omniauth' # required for devise_token_auth
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -55,4 +59,6 @@ group :test do
   gem 'cucumber-rails', :require => false
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
+
+  gem 'shoulda-matchers'
 end

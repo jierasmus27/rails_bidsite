@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount_devise_token_auth_for 'User', at: 'auth'
   resources :categories
   resources :items
   # The priority is based upon order of creation: first created -> highest priority.

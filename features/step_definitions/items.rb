@@ -8,7 +8,7 @@ Then(/^I should see "(.*?)" and "(.*?)"$/) do |item1, item2|
 end
 
 Given /^an item with name "(.*?)" and description "(.*?)"$/ do |name, description|
-  create_item(:name => name, :description => description)
+  @post = FactoryGirl.create(:item, name: name, description: description)
 end
 
 Given /^(?:|[tT]he )?following item[s]?(?: exist[s]?)?:$/ do |table|
