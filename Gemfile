@@ -29,6 +29,8 @@ gem 'mysql2', '~> 0.3.18'
 
 gem 'rails-helper'
 
+gem 'devise'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
