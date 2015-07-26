@@ -1,6 +1,8 @@
 class ItemsController < ApplicationController
-  before_action :authenticate_user!
+  #before_action :authenticate_user!
   before_action :set_item, only: [:show, :edit, :update, :destroy]
+
+  #before_filter :restrict_access
 
   # GET /items
   # GET /items.json
@@ -72,4 +74,5 @@ class ItemsController < ApplicationController
     def item_params
       params.require(:item).permit(:name, :description)
     end
+
 end

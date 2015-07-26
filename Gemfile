@@ -30,6 +30,14 @@ gem 'mysql2', '~> 0.3.18'
 gem 'rails-helper'
 
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'omniauth-instagram'
+gem 'twitter'
+gem 'instagram'
+gem 'omniauth-google-oauth2'
+gem 'google-api-client', require: 'google/api_client'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -50,7 +58,9 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
-   gem 'rspec-rails', '~> 3.0'
+  gem 'rspec-rails', '~> 3.0'
+
+  gem 'guard-rspec', require: false
 end
 
 group :test do
