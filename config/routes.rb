@@ -17,6 +17,13 @@ Rails.application.routes.draw do
     get '/users/auth/:provider/setup', :to => 'omniauth_callbacks#setup'
   end
 
+  namespace :api, defaults: {format: :json} do
+    scope module: :v1 do #, constraints: ApiConstraints.new(version: '1', default: true) do
+      resources :items, only: [:show, :update, :index]
+    end
+  end
+
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
